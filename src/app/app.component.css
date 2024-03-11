@@ -1,0 +1,11 @@
+.banner{
+    background-color: #00c2ff47;
+    padding: 2%;
+    display: flex;
+    justify-content: center;
+}
+
+.banner img{
+    width: 200px;
+}
+

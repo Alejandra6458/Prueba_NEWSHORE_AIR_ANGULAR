@@ -1,0 +1,30 @@
+<div class="form">
+    <form [formGroup]="formulario" (ngSubmit)="enviar()">
+        <input [ngClass]="{'is-invalid': hasErrors('origen','required') || hasErrors('origen','minlength') || hasErrors('origen','maxlength')}" type="text" maxlength="3" formControlName="origen">
+        <input [ngClass]="{'is-invalid': hasErrors('destino','required') || hasErrors('destino','minlength') || hasErrors('destino','maxlength')}" type="text" maxlength="3" formControlName="destino">
+        <button type="submit">Buscar</button>
+    </form>
+    <p *ngIf="bmessage">{{contmessage}}</p>
+</div>
+
+<div class="info">
+<table>
+    <tr>
+        <td><b>Origen</b></td>
+        <td><b>Destino</b></td>
+        <td><b>Aerolina</b></td>
+        <td><b>Numero de vuelo</b></td>
+        <td><b>Precio</b></td>
+    </tr>
+    <tr>
+        <td colspan="5"><i *ngIf="bloading">Cargando...</i></td>
+    </tr>
+    <tr *ngFor="let journey of journeyList">
+        <td>{{journey.origin}}</td>
+        <td>{{journey.destination}}</td>
+        <td>{{journey.transportDetails.flightCarrier}}</td>
+        <td>{{journey.transportDetails.flightNumber}}</td>
+        <td>{{journey.price | currency}}</td>
+      </tr>
+</table>
+</div>

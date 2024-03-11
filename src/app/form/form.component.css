@@ -1,0 +1,54 @@
+.form {
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(to bottom, #00c2ff47 50%, transparent 50%);
+}
+
+.form input,
+.form button {
+
+    margin: 5px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    outline: none;
+    /* Elimina el contorno predeterminado al hacer clic */
+}
+
+.form input:hover,
+.form button:hover {
+    border-color: #66aaff;
+    /* Cambia el color del borde al pasar el ratón sobre el input */
+}
+
+.form .is-invalid{
+    border: 1px solid red;
+}
+
+.form input {
+    text-transform: uppercase;
+}
+
+.form button:hover {
+    cursor: pointer;
+}
+
+.info{
+    padding: 5%;
+}
+
+table {
+    width: auto; /* Ajusta el ancho según el contenido */
+    border-collapse: collapse; /* Elimina los bordes dobles */
+    margin: 20px auto; /* Centra la tabla */
+  }
+  
+  th, td {
+    padding: 10px; /* Aumenta el espacio interior de las celdas */
+    text-align: center; /* Centra el contenido de las celdas */
+  }
+  th {
+    background-color: #ddd; /* Color de fondo del encabezado */
+    font-weight: bold; /* Texto en negrita */
+  }
